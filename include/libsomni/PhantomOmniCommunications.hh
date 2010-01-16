@@ -25,7 +25,6 @@ namespace libsomni {
 		bool ping();
 		bool startIsoStream();
 		bool stopIsoStream();
-		void runLoop();
 		void getSerial(std::string& serial_str);
 		bool writeBlocking(const uint64_t addr, uint32_t size, const char* q);
 		bool readBlocking(const uint64_t addr, uint32_t size, const char* q);

@@ -1,9 +1,9 @@
-SET(LIBRARY_SRCS PhantomDevice.cc)
+SET(LIBRARY_SRCS PhantomOmniDevice.cc)
 
-IF(APPLE)
-  LIST(APPEND LIBRARY_SRCS PhantomCommunicationsLinux.cc)
-ELSEIF(LINUX)
-  LIST(APPEND LIBRARY_SRCS PhantomCommunicationsOSX.cc)
+IF(NOT APPLE)
+  LIST(APPEND LIBRARY_SRCS PhantomOmniCommunicationsLinux.cc)
+ELSE()
+  LIST(APPEND LIBRARY_SRCS PhantomOmniCommunicationsOSX.cc)
 ENDIF()
 
 BUILDSYS_BUILD_LIB(
